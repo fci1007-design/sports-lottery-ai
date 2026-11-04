@@ -17,3 +17,8 @@ js/*
 !9流程圖/
 9流程圖/*
 !9流程圖/流程[1-9].png
+!.github/
+.github/*
+!.github/workflows/
+.github/workflows/*
+!.github/workflows/check-pages-connectivity.yml

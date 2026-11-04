@@ -1,0 +1,58 @@
+name: Check Pages connectivity
+
+"on":
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  connectivity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Compare all Pages addresses from GitHub's runner
+        shell: bash
+        run: |
+          python3 -u - <<'PY'
+          from concurrent.futures import ThreadPoolExecutor
+          from hashlib import sha256
+          from pathlib import Path
+          from tempfile import TemporaryDirectory
+          from urllib.request import urlopen
+          import json, os, subprocess, sys
+
+          repo = os.environ['GITHUB_REPOSITORY']
+          source = os.environ['GITHUB_SHA']
+          expected_url = f'https://raw.githubusercontent.com/{repo}/{source}/index.html'
+          with urlopen(expected_url, timeout=20) as response:
+              expected = sha256(response.read()).hexdigest()
+          host = repo.split('/')[0] + '.github.io'
+          project = repo.split('/')[1]
+          addresses = ['185.199.108.153', '185.199.109.153', '185.199.110.153', '185.199.111.153']
+          probes = [(h, ip) for h in [host, 'pages.github.com'] for ip in addresses]
+          with TemporaryDirectory() as directory:
+              def probe(item):
+                  domain, ip = item
+                  path = f'/{project}/' if domain == host else '/'
+                  output = Path(directory) / (domain + '-' + ip)
+                  command = ['curl', '-sS', '--connect-timeout', '6', '--max-time', '15',
+                             '--resolve', f'{domain}:443:{ip}', '-o', str(output),
+                             '-w', '%{http_code}', f'https://{domain}{path}']
+                  result = subprocess.run(command, capture_output=True, text=True)
+                  content_hash = sha256(output.read_bytes()).hexdigest() if output.exists() else None
+                  passed = result.returncode == 0 and result.stdout == '200'
+                  if domain == host:
+                      passed = passed and content_hash == expected
+                  return dict(host=domain, ip=ip, http=result.stdout, exit=result.returncode,
+                              sha256=content_hash, expected_match=content_hash == expected,
+                              error=result.stderr.strip(), passed=passed)
+              results = list(ThreadPoolExecutor(max_workers=4).map(probe, probes))
+          report = dict(source=source, expected_index_sha256=expected, results=results)
+          print('PAGES_CONNECTIVITY_JSON=' + json.dumps(report))
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+              summary.write('## Public Pages connections from GitHub\n\n')
+              summary.write('| Host | Address | HTTP | Result |\n| --- | --- | --- | --- |\n')
+              for result in results:
+                  summary.write(f"| {result['host']} | {result['ip']} | {result['http']} | {'PASS' if result['passed'] else 'FAIL'} |\n")
+          sys.exit(0 if all(result['passed'] for result in results) else 1)
+          PY

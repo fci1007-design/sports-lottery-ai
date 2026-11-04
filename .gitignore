@@ -1,0 +1,19 @@
+# Only the reviewed website and its original images are published.
+*
+!.gitignore
+!.nojekyll
+!index.html
+!asset_manifest.json
+!css/
+css/*
+!css/style.css
+!js/
+js/*
+!js/cases.js
+!js/main.js
+!7案例圖/
+7案例圖/*
+!7案例圖/案例[1-7].png
+!9流程圖/
+9流程圖/*
+!9流程圖/流程[1-9].png

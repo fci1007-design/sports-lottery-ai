@@ -1,0 +1,150 @@
+{
+  "name": "運彩企業 AI 圖解簡報原圖清單",
+  "source": "使用者既有7案例圖與9流程圖資料夾；保留原檔名與原始位元組",
+  "assets": [
+    {
+      "kind": "case",
+      "number": 1,
+      "title": "經銷商 AI 管理助理",
+      "path": "7案例圖/案例1.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1960744,
+      "sha256": "2a016063111b2c2cacdfe06b24de7d3afb608b77f9de1f7234b823551b414f4b"
+    },
+    {
+      "kind": "case",
+      "number": 2,
+      "title": "投注異常與營運風險 AI 分析助理",
+      "path": "7案例圖/案例2.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1893107,
+      "sha256": "5d47a811c1f69496a3c6065b989615de1272a60e1b183838056f119ba92e6a01"
+    },
+    {
+      "kind": "case",
+      "number": 3,
+      "title": "責任博彩與高風險投注行為管理",
+      "path": "7案例圖/案例3.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1955002,
+      "sha256": "e25cfe96ac03e3c68cfc772ee3f68d426ecfacff38b3e5f6995c0d6e9e3c77cb"
+    },
+    {
+      "kind": "case",
+      "number": 4,
+      "title": "內部營運分析與管理決策助理",
+      "path": "7案例圖/案例4.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1999943,
+      "sha256": "c4db71f7a3c41ea4f86c55c852536ac197e2359425527b7e08ee62706891f72d"
+    },
+    {
+      "kind": "case",
+      "number": 5,
+      "title": "客服申訴與交易爭議處理",
+      "path": "7案例圖/案例5.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1888124,
+      "sha256": "0dab6ec17fbaa831ffa345c96a313e9edcb16fb38057725178676afc6756269d"
+    },
+    {
+      "kind": "case",
+      "number": 6,
+      "title": "內部稽核、法遵與文件審查助理",
+      "path": "7案例圖/案例6.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1950535,
+      "sha256": "394746b1f741e1034599330de95e1496ecd7ad19e1be0e0f013e2414586c098e"
+    },
+    {
+      "kind": "case",
+      "number": 7,
+      "title": "企業知識傳承與重要系統持續服務",
+      "path": "7案例圖/案例7.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 2008580,
+      "sha256": "33d47506b8c05e79ad6ba8bc3f599751b8d71ded8f9f3b01a96f9954c3cecaee"
+    },
+    {
+      "kind": "flow",
+      "number": 1,
+      "title": "經銷商銷售異常自動監測與輔導",
+      "path": "9流程圖/流程1.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1803934,
+      "sha256": "39225dc0311f469249724c837425fcd65404e9b776318873c000b5de2acc9c63"
+    },
+    {
+      "kind": "flow",
+      "number": 2,
+      "title": "投注設備故障監測與自動派工",
+      "path": "9流程圖/流程2.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1915959,
+      "sha256": "3fb740805ccde28469dc32777097057b2815a60f1b9d4703075d0a6e94654201"
+    },
+    {
+      "kind": "flow",
+      "number": 3,
+      "title": "賽事異動自動監測與跨部門通知",
+      "path": "9流程圖/流程3.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1916199,
+      "sha256": "51e8e8e9034cd8d1b346e30a0268d4cbec8bd44af242d2c31b92ccb20906f6d8"
+    },
+    {
+      "kind": "flow",
+      "number": 4,
+      "title": "每日投注交易與帳務自動核對",
+      "path": "9流程圖/流程4.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1933341,
+      "sha256": "c9b705de696a9ebe1ae9c238cb2cbe6e41edc3b650b38337d9280fc1c8d3c371"
+    },
+    {
+      "kind": "flow",
+      "number": 5,
+      "title": "客服案件自動分類、處理與追蹤",
+      "path": "9流程圖/流程5.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1879361,
+      "sha256": "2344bed2ab0044d023d534d8b6ba194ba97233ec568173da18927f6eb157c875"
+    },
+    {
+      "kind": "flow",
+      "number": 6,
+      "title": "責任博彩高風險行為自動監測",
+      "path": "9流程圖/流程6.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 2015834,
+      "sha256": "2015e45cee7b3f3848f0f3baabc150a1c823b36af83bcf14fd473d5bf301b680"
+    },
+    {
+      "kind": "flow",
+      "number": 7,
+      "title": "行銷活動內容自動法遵檢查",
+      "path": "9流程圖/流程7.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1885747,
+      "sha256": "4566db0ba926c13ff105fc2eeab1bf7b1f2d7550efcbb23e9ab54b2030207586"
+    },
+    {
+      "kind": "flow",
+      "number": 8,
+      "title": "法規更新自動啟動文件修訂流程",
+      "path": "9流程圖/流程8.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1880413,
+      "sha256": "840b1fcf14efb59e9921a8005f0b7e3206fa8d794c3dd5231dc28f5ad62ba60f"
+    },
+    {
+      "kind": "flow",
+      "number": 9,
+      "title": "每日營運管理報告自動產生與異常追蹤",
+      "path": "9流程圖/流程9.png",
+      "status": "已直接連結原始PNG",
+      "bytes": 1888832,
+      "sha256": "dde9637e71b398fe6fd6a72f0daabcba0e25fbc78f0be0557cc201cc57fc906c"
+    }
+  ]
+}
